@@ -1,0 +1,39 @@
+.nav{
+    display: flex;
+    height: 35px;
+    background-color: #1A8FF0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-content{
+    display: flex;
+    width: 78%;
+}
+
+.nav-left{
+    display: flex;
+    align-content: flex-start;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ver-line{
+    color: #FFFF;
+    padding: 0 6px 0 6px;
+    cursor:auto;
+}
+
+.txt-adHelp, .txt-Collab, .txt-comp-name, .txt-logout{
+    color: #FFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500 ;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+

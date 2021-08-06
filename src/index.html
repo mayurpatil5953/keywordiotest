@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KeywordioTest</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!--Chart Styling-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load( 'current', { 'packages': [ 'corechart' ] } );
+    google.charts.setOnLoadCallback( drawChart );
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn( 'string', 'Topping' );
+      data.addColumn( 'number', '' );
+      data.addRows( [
+        [ '1 Apr', 0 ],
+        [ '|', 11 ],
+        [ '7 Apr', 8 ],
+        [ '|', 11 ],
+        [ '14 Apr', 19 ],
+        [ '|', 11 ],
+        [ '21 Apr', 16 ],
+        [ '|', 22 ],
+        [ '28 Apr', 25 ]
+      ] );
+
+      var options = {
+        title: 'Last 30 days',
+        vAxis: {
+          minValue: 5,
+          maxValue: 30,
+          format: '#\'%\''
+        },
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart( document.getElementById( 'curve_chart' ) );
+
+      chart.draw( data, options );
+    }
+  </script>
+
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
